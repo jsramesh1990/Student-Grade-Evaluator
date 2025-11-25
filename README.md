@@ -1,12 +1,12 @@
-Student Grade Manager – Advanced C++ Project
+🎓 Student Grade Manager (C++ Project)
 
-The Student Grade Manager is an advanced C++ application designed to read student data from a CSV file, compute totals, averages, grades, and export results back into CSV and JSON formats.
-This project demonstrates class-based design, file handling, modular structure, and includes support for optional GoogleTest unit testing.
+A modern C++ application that reads student marks from a CSV file, calculates totals, averages, and grades, and exports results in CSV & JSON formats.
+Built with clean class-based design, modular structure, and optional GoogleTest unit testing.
 
-🔧 Features
-✔ Class-Based Design
+✨ Features Overview
+🧱 Object-Oriented Design
 
-A Student class encapsulates:
+Student class handles:
 
 Marks
 
@@ -14,45 +14,33 @@ Total calculation
 
 Average calculation
 
-Grade determination
+Grade evaluation
 
-✔ Multiple Student Support
+📥 CSV Input
 
-Reads multiple student records from data/students.csv.
+Reads students from:
 
-✔ CSV File Input
+data/students.csv
 
-Input file format:
+
+Format:
 
 Name Marks1 Marks2 Marks3
 
-✔ CSV + JSON Output
-
-After processing, results are saved into:
+📤 Exports Output
 
 data/results.csv
 
 data/results.json
 
-✔ Clear Logical Implementation
-
-Total = sum of marks
-
-Average = Total / 3
-
-Grade Mapping:
-
-A → avg ≥ 90
-
-B → avg ≥ 75
-
-C → avg ≥ 60
-
-D → avg ≥ 40
-
-F → avg < 40
-
-📂 Project Structure
+➗ Grade Logic
+Average	Grade
+≥ 90	A
+≥ 75	B
+≥ 60	C
+≥ 40	D
+< 40	F
+📁 Project Structure
 student_grade_manager/
  ├── src/
  │    ├── main.cpp
@@ -69,61 +57,63 @@ student_grade_manager/
  ├── CMakeLists.txt
  └── README.md
 
-🚀 Building & Running the Project
-🔹 Using Makefile (Recommended)
-Build the project
+⚙️ Build & Run
+🛠 Using Makefile (Recommended)
+Build:
 make
 
-Run the project
+Run:
 make run
 
-Clean build files
+Clean:
 make clean
 
-🧪 Unit Testing (GoogleTest)
+🧪 Unit Testing with GoogleTest
 
-Unit tests are located inside the tests/ directory.
+Tests are inside:
 
-Run tests using CMake:
+tests/
+
+
+Run using CMake:
+
 ctest
 
-📝 Example Input (students.csv)
+📘 Sample Input (students.csv)
 Alice 95 92 88
 Bob 78 74 80
 Charlie 60 65 62
 David 45 42 40
 Eve 25 30 20
 
-📤 Output Files
-data/results.csv
-
-Contains:
-
-Name Total Average Grade
-
-data/results.json
-
-Example:
-
+📊 Output Example (results.json)
 [
   {
     "name": "Alice",
     "total": 275,
-    "average": 91.6,
+    "average": 91.66,
     "grade": "A"
   }
 ]
 
-🔮 Future Updates / Planned Enhancements
-Feature	Description
-Interactive CLI	Add menus to add, edit, delete students dynamically.
-Enhanced JSON Support	Use modern JSON libraries such as nlohmann-json.
-Exception Handling	Improve robustness for CSV reading errors or invalid entries.
-SQLite Database Integration	Replace CSV with a small local database.
-Web/API Interface	Convert project into a REST API using C++ frameworks.
-Graphical Report Generation	Export PDF reports or charts for analysis.
-Performance Profiling	Add benchmarks to measure speed and memory usage.
-👨‍💻 Author
+🚀 Future Enhancements
+🔹 Planned Features
 
-SEBASTIAN RAMESH S
-Embedded Systems | C++ Developer | Linux/Yocto | Device Drivers
+Interactive CLI (add/edit/delete students)
+
+JSON library support (nlohmann-json)
+
+Exception handling improvements
+
+SQLite database support
+
+REST API version (crow / cpp-httplib)
+
+PDF & chart report generation
+
+Performance benchmark tests
+
+👤 Author
+
+SSR
+Embedded Systems Developer • C++ • Linux/Yocto • Drivers
